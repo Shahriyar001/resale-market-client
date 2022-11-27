@@ -1,4 +1,5 @@
 import React from 'react';
+import PrimaryButton from '../../../Componants/PrimaryButton/PrimaryButton';
 
 const About = () => {
     return (
@@ -9,7 +10,7 @@ const About = () => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">About Us</h1>
                         <p className="mb-5">We provite a service which .</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <PrimaryButton>Getting Started</PrimaryButton>
                     </div>
                 </div>
             </div>
