@@ -1,0 +1,74 @@
+[
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
+        "name": "Panasonic r2",
+        "location": "New Yourk",
+        "resale": 30,
+        "original": 50,
+        "use": "1 year",
+        "time": "10.35 am",
+        "saler": "Jon Bar",
+        "img": "https://5.imimg.com/data5/JJ/CC/JA/SELLER-16591838/kx-dt546-panasonic-digital-telephone-500x500-250x250.jpg",
+        "details": ""
+    },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab6b",
+        "name": "Samsung 9",
+        "location": "Washington",
+        "resale": 300,
+        "original": 350,
+        "use": "2 years",
+        "time": "12.00 pm",
+        "saler": "Richarl dip",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0C5K2R6xwJs8ypAkJzfwaosyT4HqX-Oc3-SZfHlmsAJXnU8EAGTrh4TRxJy9k9t5oPYg&usqp=CAU",
+        "details": ""
+    },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab6c",
+        "name": "Iphone 8",
+        "location": "New Yourk",
+        "resale": 1030,
+        "original": 2000,
+        "use": "2.5 years",
+        "time": "10.30",
+        "saler": "Antony Bar",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7o7KUS05T1CXYTB2M5nTpekzBYC2y66Z2_g&usqp=CAU",
+        "details": ""
+    },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab6d",
+        "name": "Panasonic r18",
+        "location": "San Francisko",
+        "resale": 40,
+        "original": 55,
+        "use": "1.5 year",
+        "time": "05.30 pm",
+        "saler": "Jon Bar",
+        "img": "https://ctgtechno.com/wp-content/uploads/2021/07/kx-dt543-228x228-1.jpg",
+        "details": ""
+    },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab6e",
+        "name": "Redmi 13",
+        "location": "Miami",
+        "resale": 400,
+        "original": 450,
+        "use": "1 year",
+        "time": "02.00 pm",
+        "saler": "jon dip",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOcemGPQMTL-OuBc7i8qlv-b_D157fZBSirg&usqp=CAU",
+        "details": ""
+    },
+    {
+        "_id": "0282e0e58a5c404fbd15261f11c2ab6f",
+        "name": "Iphone 13",
+        "location": "Washington",
+        "resale": 2030,
+        "original": 3000,
+        "use": "2 years",
+        "time": "11.30 am",
+        "saler": "Rock Bar",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu2247NkialOzGtDxhG4_7wu77l9Wno9FwWQ&usqp=CAU",
+        "details": ""
+    }
+]
