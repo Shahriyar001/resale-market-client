@@ -3,6 +3,7 @@ import land from '../../../assets/images/landphone.jpg'
 import android from '../../../assets/images/android.png'
 import iphone from '../../../assets/images/iphone.jpg'
 import CatagoryCard from './CatagoryCard';
+import Product from '../../Products/Product/Product';
 
 const Catagory = () => {
     const catagoryData = [
@@ -39,6 +40,10 @@ const Catagory = () => {
                     ></CatagoryCard>)
                 }
 
+            </div>
+            <div>
+                <h2>Product</h2>
+                <Product></Product>
             </div>
         </div>
     );
