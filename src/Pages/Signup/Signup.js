@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 
@@ -7,7 +8,7 @@ const Signup = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
-    // const [signUpError, setSignUpError] = useState('');
+    const [signUpError, setSignUpError] = useState('');
 
     // const [createdUserEmail, setCreatedUserEmail] = useState('');
     // const [token] = useToken(createdUserEmail);
@@ -16,24 +17,24 @@ const Signup = () => {
 
     const handleSignUp = (data) => {
         console.log(data);
-        // setSignUpError('');
+        setSignUpError('');
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                // toast('User Created Successfully.')
-                // const userInfo = {
-                //     displayName: data.name
-                // }
-                // updateUser(userInfo)
-                //     .then(() => {
-                //         saveUser(data.name, data.email);
-                //     })
-                //     .catch(err => console.log(err))
+                toast('User Created Successfully.')
+                const userInfo = {
+                    displayName: data.name
+                }
+                updateUser(userInfo)
+                    .then(() => {
+                        // saveUser(data.name, data.email);
+                    })
+                    .catch(err => console.log(err))
             })
             .catch(error => {
                 console.log(error)
-                // setSignUpError(error.message)
+                setSignUpError(error.message)
             });
     }
 
@@ -67,7 +68,7 @@ const Signup = () => {
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </div>
                     <input className='btn btn-accent w-full mt-6' value="Sign up" type="submit" />
-                    {/* {signUpError && <p className='text-red-600'>{signUpError}</p>} */}
+                    {signUpError && <p className='text-red-600'>{signUpError}</p>}
                 </form>
                 <p>Already have an account<Link className='text-secondary' to="/login"> please Login</Link></p>
                 <div className="divider">OR</div>
