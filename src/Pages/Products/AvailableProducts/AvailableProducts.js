@@ -28,6 +28,7 @@ const AvailableProducts = () => {
                 phone &&
                 <BookingModal
                     phone={phone}
+                    setPhone={setPhone}
                 ></BookingModal>
             }
         </section>
