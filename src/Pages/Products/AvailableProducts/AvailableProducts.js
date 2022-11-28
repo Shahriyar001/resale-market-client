@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
 import BookingModal from '../BookingModal/BookingModal';
 import ProductOption from './ProductOption';
 
 const AvailableProducts = () => {
-    const [products, setProducts] = useState([]);
     const [phone, setPhone] = useState(null);
 
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    const { data: products = [] } = useQuery({
+        queryKey: ['products'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/products');
+            const data = await res.json();
+            return data
+        }
+    });
+
     return (
         <section className='my-16'>
             <p className='text-center text-primary'>Available Product</p>
