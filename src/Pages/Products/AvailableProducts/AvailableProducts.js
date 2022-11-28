@@ -1,12 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
+import Loading from '../../Shared/Loading/Loading';
 import BookingModal from '../BookingModal/BookingModal';
 import ProductOption from './ProductOption';
 
 const AvailableProducts = () => {
     const [phone, setPhone] = useState(null);
 
-    const { data: products = [] } = useQuery({
+    const { data: products = [], isLoading } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/products');
@@ -14,6 +15,10 @@ const AvailableProducts = () => {
             return data
         }
     });
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     return (
         <section className='my-16'>

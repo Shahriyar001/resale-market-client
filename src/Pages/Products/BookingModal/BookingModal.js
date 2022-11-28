@@ -13,6 +13,7 @@ const BookingModal = ({ phone, setPhone }) => {
         const name = form.name.value;
         const email = form.email.value;
         const number = form.number.value;
+        const location = form.location.value;
 
 
         const booking = {
@@ -20,7 +21,8 @@ const BookingModal = ({ phone, setPhone }) => {
             buyer: name,
             email,
             number,
-            resale
+            resale,
+            location
         }
         console.log(booking)
 
@@ -34,16 +36,14 @@ const BookingModal = ({ phone, setPhone }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setPhone(null);
-                toast.success('Booking confirmed');
-                // if (data.acknowledged) {
-                //     setTreatment(null);
-                //     toast.success('Booking confirmed');
-                //     refetch();
-                // }
-                // else {
-                //     toast.error(data.message);
-                // }
+                if (data.acknowledged) {
+                    setPhone(null);
+                    toast.success('Booking confirmed');
+                    // refetch();
+                }
+                else {
+                    toast.error(data.message);
+                }
             })
 
         setPhone(null);
@@ -61,6 +61,7 @@ const BookingModal = ({ phone, setPhone }) => {
                         <input name='name' type="text" disabled defaultValue={user?.displayName} className="input input-bordered w-full" />
                         <input name='email' type="email" disabled defaultValue={user?.email} className="input input-bordered w-full" />
                         <input name='number' type="text" placeholder="Number" className="input input-bordered w-full" />
+                        <input name='location' type="text" placeholder="Meeting-location" className="input input-bordered w-full" />
                         <br />
                         <input className='btn btn-accent w-full max-w-xs' type="submit" value="submit" />
                     </form>
