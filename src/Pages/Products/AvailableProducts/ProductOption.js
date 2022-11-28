@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductOption = ({ product }) => {
+const ProductOption = ({ product, setPhone }) => {
     const { name, location, resale, original, use, time, saler, img } = product;
     return (
         <div className="card shadow-xl">
@@ -16,7 +16,11 @@ const ProductOption = ({ product }) => {
                 <p>publish: {time} </p>
                 <p>Seller: {saler}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Book now</button>
+                    <label
+                        htmlFor="booking-modal"
+                        className="btn btn-primary"
+                        onClick={() => setPhone(product)}
+                    >Book now</label>
                 </div>
             </div>
         </div>
