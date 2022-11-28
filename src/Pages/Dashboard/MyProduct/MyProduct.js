@@ -35,7 +35,7 @@ const MyProduct = () => {
                             <th>Name</th>
                             <th>Product</th>
                             <th>price</th>
-                            <th>Location</th>
+                            <th>Meet Location</th>
                             {/* <th>Payment</th> */}
                         </tr>
                     </thead>
